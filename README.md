@@ -8,5 +8,5 @@ Para tal, antes de compilar o código, o usuário deve seguir a instrução da l
 Isso é necessário pois a função abaixo utiliza o LED RGB da BitDogLab, onde a cor amarela é uma junção de vermelho e verde, enquanto na simulação é possível colocar diretamente um LED amarelo.
 Por padrão, este projeto prioriza a função necessária para simulação, deixando sua outra versão comentada.
 
-Para observar a execução do código na BitDogLab, pode-se acessar o link abaixo:
+Para observar a execução do código na BitDogLab, pode-se acessar o link a seguir:
 [https://drive.google.com/file/d/1BeKuUSFhFojVeoa5RNKuloaET0rUbCnE/view?usp=drivesdk]
