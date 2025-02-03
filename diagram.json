@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "author": "Lucas Emmanuel Reis Mariano",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-pi-pico-w",
+      "id": "pico",
+      "top": -22.45,
+      "left": 13.15,
+      "attrs": { "builder": "pico-sdk" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 34.8,
+      "left": -111.4,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": 92.4,
+      "left": -111.4,
+      "attrs": { "color": "yellow" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led3",
+      "top": 150,
+      "left": -111.4,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 71.15,
+      "left": -67.2,
+      "attrs": { "value": "330000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 128.75,
+      "left": -67.2,
+      "attrs": { "value": "330000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": 186.35,
+      "left": -67.2,
+      "attrs": { "value": "330000" }
+    }
+  ],
+  "connections": [
+    [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+    [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+    [ "r3:1", "led3:A", "green", [ "v0" ] ],
+    [ "pico:GP12", "r2:2", "gold", [ "h0" ] ],
+    [ "r2:1", "led2:A", "gold", [ "v0" ] ],
+    [ "r1:1", "led1:A", "red", [ "v0" ] ],
+    [ "led3:C", "pico:GND.4", "black", [ "v19.2", "h106", "v-57.6" ] ],
+    [ "led2:C", "pico:GND.4", "black", [ "v19.2", "h-9.2", "v67.2", "h115.2", "v-67.2" ] ],
+    [ "led1:C", "pico:GND.4", "black", [ "v19.2", "h-18.8", "v134.4", "h124.8", "v-76.8" ] ],
+    [ "pico:GP11", "r3:2", "green", [ "h-19.2", "v67.2" ] ],
+    [ "r1:2", "pico:GP13", "red", [ "v0", "h8.4", "v67.2" ] ]
+  ],
+  "dependencies": {}
+}
